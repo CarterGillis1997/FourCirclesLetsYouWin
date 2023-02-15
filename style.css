@@ -1,0 +1,121 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.col {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+.cell {
+    border: 1px solid;
+    width: 15vh;
+    border-radius: 50vh;
+    height: 15vh;
+    background-color: white;
+}
+.board {
+    width: 115vh;
+    border: 1px solid;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: lightsteelblue;
+}
+.pieces {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100% - 115vh);
+}
+
+.blackPiece, .redPiece {
+    width: 15vh;
+    height: 15vh;
+    border: 1px solid;
+    border-radius: 50vh;
+}
+.blackPiece{
+    background: black;
+}
+.redPiece{
+    background: red;
+}
+.pickColor {
+    position: absolute;
+    width: 50vh;
+    height: 25vh;
+    top: calc(50% - 12.5vh);
+    left: calc(50% - 25vh);
+    border: 2vh groove #a90000;
+    border-top-color: red;
+    border-left-color: red;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    background: linear-gradient(338deg, #424242 40%, red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+h2.picks {
+    padding: 0 2vh;
+    font-size: 5vh;
+}
+.picks:hover {
+    color: green;
+    border: 1px solid;
+    cursor: pointer;
+}
+.colHover:hover {
+    box-shadow: 0 0 10px blue, inset 0 0 10px blue;
+    cursor: pointer;
+}
+.current {
+    box-shadow: inset 0 0 10px blue;
+}
+.winMessage {
+    color: white;
+    width: 45vh;
+    height: 20vh;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2vh ridge;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
